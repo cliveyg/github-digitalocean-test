@@ -7,8 +7,7 @@ jobs:
   deploy:
     runs-on: ubuntu-18.04
     steps:
-      - name: Deploy Repo
-            # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Checkout
         uses: appleboy/ssh-action@v0.1.2
         with:
