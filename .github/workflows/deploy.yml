@@ -8,6 +8,9 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - name: Deploy Repo
+            # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: Checkout
+        uses: appleboy/ssh-action@v0.1.2
         with:
           host: ${{secrets.SSH_HOST}} # IP address of the server you wish to ssh into
           key: ${{secrets.SSH_KEY}} # Private or public key of the server
