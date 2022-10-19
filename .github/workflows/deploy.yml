@@ -20,5 +20,7 @@ jobs:
             cd dotest 
             git clone git@github.com:cliveyg/github-digitalocean-test.git 
             cd github-digitalocean-test
+            docker-compose down --remove-orphans
             git pull
+            docker-compose up -d --build --remove-orphans
             echo 'Deployment successful to digital ocean' 
